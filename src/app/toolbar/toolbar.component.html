@@ -1,3 +1,8 @@
-<div class="toolbar" role="baner">
-    <h2>Toolbar</h2>
+<div class="toolbar" role="banner">
+    <a *ngFor="let menu of menus" class="menu"
+       routerLink="/menus/actions/{{menu.action}}">
+       <div class="col-1-4">
+           <h4>{{menu.label}}</h4>
+       </div>
+    </a>
 </div>
