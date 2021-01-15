@@ -1,0 +1,33 @@
+.spacer {
+    flex: 1;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar img {
+    margin: 0 16px;
+}
+
+.toolbar a.menu {
+    margin: 0.5em 0.1em 0.5em 0.1em;
+    list-style-type: none;
+    width: 15em;
+    padding: 1px;
+    background-color: rgb(190, 200, 230);
+    vertical-align: middle;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
