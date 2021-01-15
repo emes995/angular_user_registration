@@ -2,6 +2,10 @@
     flex: 1;
 }
 
+.menu {
+    background-color: blue;
+}
+
 .toolbar {
     position: absolute;
     top: 0;
@@ -9,25 +13,28 @@
     right: 0;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
+    background-color: rgb(159, 182, 144);
+    height: 3em;
 }
 
-.toolbar img {
-    margin: 0 16px;
-}
-
-.toolbar a.menu {
-    margin: 0.5em 0.1em 0.5em 0.1em;
+.toolbar div.menu {
+    margin: 0.2em 0.1em 0.2em 0.1em;
     list-style-type: none;
-    width: 15em;
+    height: 2.5em;
+    width: 10em;
     padding: 1px;
-    background-color: rgb(190, 200, 230);
-    vertical-align: middle;
-    text-align: center;
+    background-color: rgb(159, 182, 144);
 }
 
-a {
+.toolbar a {
+    opacity: 0.60;
     text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.toolbar a:hover {
+    opacity: 1.0;
+    background-color: black
 }

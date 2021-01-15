@@ -3,4 +3,5 @@ export interface Menu {
     action: string;
     label: string;
     css: string;
+    img: string;
 }
