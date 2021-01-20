@@ -1,40 +1,21 @@
-.spacer {
-    flex: 1;
-}
-
-.menu {
-    background-color: blue;
-}
-
-.toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    background-color: rgb(159, 182, 144);
+nav {
+    background-color: #333;
     height: 3em;
 }
 
-.toolbar div.menu {
-    margin: 0.2em 0.1em 0.2em 0.1em;
-    list-style-type: none;
-    height: 2.5em;
-    width: 10em;
-    padding: 1px;
-    background-color: rgb(159, 182, 144);
-}
-
-.toolbar a {
-    opacity: 0.60;
+nav a {
+    padding: 10px 10px 0px 0px;
     text-decoration: none;
-    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    width: 100px;
+    height: 2.3em;
     text-align: center;
-    vertical-align: middle;
-}
+  }
 
-.toolbar a:hover {
-    opacity: 1.0;
-    background-color: black
+nav a:hover {
+    background-color: rgba(4, 245, 36, 0.795);
 }

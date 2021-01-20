@@ -1,6 +1,7 @@
-<div class="toolbar" role="banner">
+<nav>
     <a *ngFor="let menu of menus"
-       routerLink="/menus/actions/{{menu.action}}">
-       <div class="{{menu.css}}">{{menu.label}}</div>
+        routerLink="{{menu.action}}"
+        class="{{menu.css}}">
+        {{menu.label}}
     </a>
-</div>
+</nav>

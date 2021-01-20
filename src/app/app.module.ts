@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { PropertiesContentComponent } from './properties-content/properties-content.component';
+import { LandingComponent } from './landing/landing.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    PropertiesContentComponent
+    PropertiesContentComponent,
+    LandingComponent,
+    AboutusComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
@@ -19,4 +25,5 @@ import { PropertiesContentComponent } from './properties-content/properties-cont
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
