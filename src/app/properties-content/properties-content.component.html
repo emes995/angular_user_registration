@@ -1,5 +1,13 @@
-<div class="module">
-    <span>
-        <h4>Properties</h4>
-    </span>
-</div>
+    <div class=module>
+        <div class="left-panel">
+            <h4 align="center">Property List</h4>
+            <app-property-list 
+                *ngFor="let property of properties" [property]="property"
+            >
+            </app-property-list>
+        </div>
+        <div class="right-panel">
+            <h4 align="center">Property Details</h4>
+            <app-property-detail></app-property-detail>
+        </div>
+    </div>

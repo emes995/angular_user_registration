@@ -8,6 +8,8 @@ import { PropertiesContentComponent } from './properties-content/properties-cont
 import { LandingComponent } from './landing/landing.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { PropertyDetailComponent } from './property-detail/property-detail.component';
+import { PropertyListComponent } from './property-list/property-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ContactusComponent } from './contactus/contactus.component';
     PropertiesContentComponent,
     LandingComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    PropertyDetailComponent,
+    PropertyListComponent
   ],
   imports: [
     BrowserModule,

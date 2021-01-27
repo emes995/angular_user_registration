@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Menu } from '../menu';
-import { MENUS } from '../menus'
+import { Menu } from '../dataview/menu';
+import { MENUS } from '../dataview/menus'
 
 @Component({
   selector: 'app-toolbar',
