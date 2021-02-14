@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Property } from '../app/dataview/property'
+import { PROPERTIES } from '../app/dataview/properties'
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,10 +10,12 @@ export class PropertiesService {
 
   constructor() { }
 
-  getProperties() {
-    return [
-      {id: 1, name: 'Bentley', address: 'address 1'},
-      {id: 2, name: '770 OP', address: 'address 2'}
-    ]
+  getProperties(): Observable<Property[]> {
+    return of(PROPERTIES)
+  }
+
+  getProperty(id: number): Observable<Property|undefined> {
+    //return of(PROPERTIES.find(property => property.id === id));
+    return of(PROPERTIES.find(property => property.id === id))
   }
 }

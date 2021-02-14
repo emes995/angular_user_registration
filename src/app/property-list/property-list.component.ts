@@ -7,11 +7,9 @@ import { Property } from '../dataview/property';
   styleUrls: ['./property-list.component.css']
 })
 export class PropertyListComponent implements OnInit {
-  @Input() property: Property;
+  @Input() property!: Property;
 
-  constructor() { 
-    this.property = {id: -1, name: 'N/A', address: ''}
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

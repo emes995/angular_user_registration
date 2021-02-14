@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PropertiesService } from '../../services/properties.service'
 import { Property } from '../dataview/property';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-properties-content',
@@ -9,14 +10,12 @@ import { Property } from '../dataview/property';
 })
 export class PropertiesContentComponent implements OnInit {
 
-  properties: Property[];
+  properties!: Property[];
 
-  constructor(private propService: PropertiesService) {
-    this.properties = []
-   }
+  constructor(private propService: PropertiesService) {   }
 
   ngOnInit(): void {
-    this.properties = this.propService.getProperties()
+    this.propService.getProperties().subscribe(properties => this.properties = properties)
   }
 
 }

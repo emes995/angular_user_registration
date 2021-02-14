@@ -1,4 +1,4 @@
-    <div class=module>
+    <div class=module *ngIf="properties">
         <div class="left-panel">
             <h4 align="center">Property List</h4>
             <app-property-list 
@@ -11,3 +11,4 @@
             <app-property-detail></app-property-detail>
         </div>
     </div>
+    <router-outlet name="details"></router-outlet>

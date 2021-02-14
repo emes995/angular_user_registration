@@ -1,6 +1,7 @@
-import { NullTemplateVisitor } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
 import { Property } from '../dataview/property'
+import { ActivatedRoute } from '@angular/router';
+import { PropertiesService } from 'src/services/properties.service';
 
 @Component({
   selector: 'app-property-detail',
@@ -9,13 +10,19 @@ import { Property } from '../dataview/property'
 })
 
 export class PropertyDetailComponent implements OnInit {
-  @Input() property: Property;
 
-  constructor() {
-    this.property = {id: 0, name: 'N/A', address: 'N/A'}
-   }
+  @Input() property!: Property|undefined;
+
+  constructor(private route: ActivatedRoute,
+              private propService: PropertiesService) { }
 
   ngOnInit(): void {
+    this.getProperty()
+  }
+
+  getProperty(): void {
+    const id: string = this.route.snapshot.paramMap.get('id')!;
+    this.propService.getProperty(parseInt(id)).subscribe(property => this.property = property)
   }
 
 }

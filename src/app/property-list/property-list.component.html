@@ -1,6 +1,6 @@
 <div class="container">
     <a class="card"
-       routerLink="/property-detail/{{property.id}}">
+       [routerLink]="['property', property.id]">
         {{ property.name }}
     </a>
 </div>
