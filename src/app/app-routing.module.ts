@@ -9,11 +9,14 @@ import { PropertyDetailComponent } from './property-detail/property-detail.compo
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
-  { path: 'properties', component: PropertiesContentComponent },
+  { path: 'properties', component: PropertiesContentComponent,
+    children: [
+      { path: 'property/:id', component: PropertyDetailComponent}
+    ]
+  },
   { path: 'landing', component: LandingComponent },
   { path: 'aboutus', component: AboutusComponent },
-  { path: 'contactus', component: ContactusComponent },
-  { path: 'properties/property/:id', component: PropertyDetailComponent}
+  { path: 'contactus', component: ContactusComponent }
 ];
 
 @NgModule({

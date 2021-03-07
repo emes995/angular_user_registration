@@ -2,8 +2,7 @@
         <div class="left-panel">
             <h4 align="center">Property List</h4>
             <app-property-list 
-                *ngFor="let property of properties" [property]="property"
-            >
+                *ngFor="let property of properties" [property]="property">
             </app-property-list>
         </div>
         <div class="right-panel">
@@ -11,4 +10,4 @@
             <app-property-detail></app-property-detail>
         </div>
     </div>
-    <router-outlet name="details"></router-outlet>
+    <router-outlet></router-outlet>
