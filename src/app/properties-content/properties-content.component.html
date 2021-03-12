@@ -1,13 +1,10 @@
-    <div class=module *ngIf="properties">
-        <div class="left-panel">
-            <h4 align="center">Property List</h4>
+    <div class=stack-horiz *ngIf="properties" style="padding: 0px;">
+        <div class="content" style="width: 30%; height: 370px; padding: 0px;">
             <app-property-list 
                 *ngFor="let property of properties" [property]="property">
             </app-property-list>
         </div>
-        <div class="right-panel">
-            <h4 align="center">Property Details</h4>
-            <app-property-detail></app-property-detail>
+        <div class="content" style="width: 70%; height: 370px; padding: 0px;">
+            <router-outlet></router-outlet>
         </div>
     </div>
-    <router-outlet></router-outlet>

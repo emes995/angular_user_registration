@@ -11,6 +11,9 @@ import { PropertiesService } from 'src/services/properties.service';
 
 export class PropertyDetailComponent implements OnInit {
 
+  lat = 51.678418;
+  lng = 7.809007;
+
   @Input() property!: Property;
 
   constructor(private route: ActivatedRoute,
