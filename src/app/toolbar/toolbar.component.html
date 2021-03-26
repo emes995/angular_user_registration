@@ -1,7 +1,8 @@
 <nav>
+    <span>
     <a *ngFor="let menu of menus"
-        routerLink="{{menu.action}}"
-        class="{{menu.css}}">
+        routerLink="{{menu.action}}">
         {{menu.label}}
     </a>
+    </span>
 </nav>
